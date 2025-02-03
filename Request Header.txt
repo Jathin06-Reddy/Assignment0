@@ -1,0 +1,71 @@
+Request Header 
+
+Postman-Token (Calculated when request id sent ): 
+This header includes a randomly generated UUID with each request. Postman adds it to assist with API development, making it easier to debug requests and ensuring that each one appears unique to the server.
+
+Host (Calculated when request id sent ): 
+This header specifies the domain name to which the request is being sent. It is automatically included by all HTTP clients to let the server know which host is being accessed.
+
+User-Agent (PostmanRun/7.43.0): 
+This header helps the server recognize Postman as the application making the request.
+
+Accept ( */*)
+The Accept: */* header informs the server that Postman can handle responses in any content format.
+
+Accept-Encoding  (gzip, deflate, br)
+This header tells the server which compression methods Postman supports for receiving responses.
+
+Connection ( keep-alive)
+This header is used by Postman to request that the server keep the connection open after responding, allowing future requests to the same server to be handled more quickly.
+
+
+
+
+
+Request Header 
+
+Content-Type (application/json; Charset = UFT-8)
+-	Indicates the format of the response data.
+-	Example: application/json; charset=UTF-8
+-	This means the server is sending a JSON response, using UTF-8 encoding.
+
+Vary:
+Tells caching servers which request headers might change the response.
+Example values:
+-	Origin → Response may differ based on where the request originates.
+-	X-Origin → Similar, but specifically for cross-origin requests.
+-	Referer → Response can change depending on the referring website.
+
+Content-Encoding:
+-	Specifies how the response is compressed before being sent.
+-	Example: gzip → The server compresses the response using Gzip to make it smaller.
+
+Date:
+-	Shows the exact time when the server generated the response.
+-	Example: Mon, 03 Feb 2025 03:14:12 GMT
+-	This is useful for tracking when a response was created.
+
+Server (ESF):
+-	Identifies the software running on the server that processed the request.
+-	Example: ESF (Google’s Edge Server Framework).
+
+X-XSS-Protection (0)
+-	Helps defend against Cross-Site Scripting (XSS) attacks.
+-	Example: 0 → XSS filtering is turned off.
+
+X-Frame-Options (SAMEORIGIN):
+-	Controls whether a webpage can be embedded inside an iframe.
+-	Example: SAMEORIGIN → Only allows embedding on the same website to prevent clickjacking attacks.
+
+X-Content-Type-Options(nosniff):
+-	Prevents browsers from guessing the file type of the response.
+-	Example: nosniff → Forces browsers to stick to the declared Content-Type.
+
+Alt-Svc (Alternative Services):
+-	Suggests an alternative protocol or server for communication.
+
+Transfer-Encoding (Chunked) :
+-	Defines how the response is sent in parts rather than all at once.
+-	Example: chunked → The data is transmitted in chunks instead of a single response.
+
+
